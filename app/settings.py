@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
 import os
-from .secret_key import SECRET_KEY
+SECRET_KEY = '_2&8sp6f^m2=(ywhj@(d^x6$u)h)nc6j_w&$d*zsm9=#0b^wwf'
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(
@@ -96,3 +96,32 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = True
+
+# Database
+# https://docs.djangoproject.com/en/2.1/ref/settings/#databases
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgres',
+        'USER': 'postgres',
+        'HOST': 'db',
+        'PORT': 5432,
+    }
+}
+
+MEDIA_URL = '/media/'
+STATIC_URL = '/static/'
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+
+PRODUCTS = 'products/'
+
+STATICFILES_DIRS = []
+
+ALLOWED_HOSTS = ['*']

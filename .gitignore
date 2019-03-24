@@ -1,6 +1,3 @@
 .idea/
 __pycache__/
-
-development.py
-secret_key.py
 media/
