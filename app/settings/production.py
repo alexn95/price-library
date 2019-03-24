@@ -16,15 +16,14 @@ DATABASES = {
     }
 }
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/2.1/howto/static-files/
-
 MEDIA_URL = '/media/'
+STATIC_URL = '/static/'
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
-STATIC_URL = '/static/'
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static')
-]
+PRODUCTS = 'products/'
 
+STATICFILES_DIRS = []
 
+ALLOWED_HOSTS = ['*']
